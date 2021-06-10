@@ -21,6 +21,8 @@ class m210610_160614_create_tb_usuario extends Migration
             'usuario_email' => $this->string(100)->notNull(),
             'usuario_tel' => $this->string(15)->notNull(),
             'usuario_senha' => $this->string(1000)->notNull(),
+            'usuario_status' => $this->integer()->notNull(),
+           
         ], 'engine = InnoDb, charset = utf8');
         $this->addForeignKey('usuario_modulo_cod_fk02','{{%usuario}}','modulo_cod_fk','{{%modulo}}','modulo_cod_pk');
         $this->addForeignKey('usuario_perfil_cod_fk03','{{%usuario}}','perfil_cod_fk','{{%perfil}}','perfil_cod_pk');

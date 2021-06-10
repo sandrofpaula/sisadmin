@@ -84,6 +84,32 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->perfilCodFk->perfil_descricao;
                 },
             ],
+            [
+                'attribute' => 'usuario_status',
+                'value' => 'usuario_status',
+                //'headerOptions'=>['style'=>'text-align: center;'],
+                //'contentOptions'=>['style'=>'text-align: center; width:125px'],
+                'format' => 'html',
+                'filter' => \kartik\select2\Select2::widget([
+                    'model'=>$searchModel,
+                    'data' => [1 => "ATIVO", 0 => "INATIVO"],
+                    'attribute'=>'usuario_status',
+                    'pluginOptions'=>[
+                        'placeholder'=>'- Selecione - ',
+                        'allowClear' => true,
+                    ]
+                ]),
+                'value'=>function($data){
+                   // return $data->moduloCodFk->modulo_descricao;
+                    if($data->usuario_status==1){
+                        //return '<font color="green"><b>'.$data->sTATUSEQUIPAMENTOCODFK->STATUS_EQUIPAMENTO_DESCRICAO.'</b></font>';
+                        return '<span style="color:#039a03;text-shadow: 1px 1px 0px #000;"><b>ATIVO</b></span>';
+                    }elseif($data->usuario_status==0){
+                       // return '<font color="orange"><b>'.$data->sTATUSEQUIPAMENTOCODFK->STATUS_EQUIPAMENTO_DESCRICAO.'</b></font>';
+                        return '<span style="color:#DF7401;text-shadow: 1px 1px 0px #000;"><b>INATIVO</b></span>';
+                    }
+                },
+            ],
             //'usuario_email:email',
             //'usuario_tel',
             //'usuario_senha',

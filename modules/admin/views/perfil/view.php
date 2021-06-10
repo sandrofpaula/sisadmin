@@ -30,9 +30,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'perfil_cod_pk',
-            'modulo_cod_fk',
+            [
+                'attribute' => 'modulo_cod_fk',
+                'value'=>function($data){
+                    return $data->moduloCodFk->modulo_descricao;
+                },
+            ],
             'perfil_descricao',
-            'perfil_status',
+            [
+                'attribute' => 'perfil_status',
+                'format' => 'html',
+                'value'=>function($data){
+                    if($data->perfil_status==1){
+                        //return '<font color="green"><b>'.$data->sTATUSEQUIPAMENTOCODFK->STATUS_EQUIPAMENTO_DESCRICAO.'</b></font>';
+                        return '<span style="color:#039a03;text-shadow: 1px 1px 0px #000;"><b>ATIVO</b></span>';
+                    }elseif($data->perfil_status==0){
+                       // return '<font color="orange"><b>'.$data->sTATUSEQUIPAMENTOCODFK->STATUS_EQUIPAMENTO_DESCRICAO.'</b></font>';
+                        return '<span style="color:#DF7401;text-shadow: 1px 1px 0px #000;"><b>INATIVO</b></span>';
+                    }
+                },
+            ],
         ],
     ]) ?>
 

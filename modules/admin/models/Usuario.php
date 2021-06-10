@@ -15,6 +15,7 @@ use Yii;
  * @property string $usuario_email
  * @property string $usuario_tel
  * @property string $usuario_senha
+ * @property int $usuario_status
  *
  * @property Modulo $moduloCodFk
  * @property Perfil $perfilCodFk
@@ -35,8 +36,8 @@ class Usuario extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['modulo_cod_fk', 'perfil_cod_fk', 'usuario_nome', 'usuario_login', 'usuario_email', 'usuario_tel', 'usuario_senha'], 'required'],
-            [['modulo_cod_fk', 'perfil_cod_fk'], 'integer'],
+            [['modulo_cod_fk', 'perfil_cod_fk', 'usuario_status', 'usuario_nome', 'usuario_login', 'usuario_email', 'usuario_tel', 'usuario_senha'], 'required'],
+            [['modulo_cod_fk', 'perfil_cod_fk', 'usuario_status'], 'integer'],
             [['usuario_nome'], 'string', 'max' => 150],
           //  [['usuario_nome'], 'filter', 'filter'=>'strtoupper '],//mb_strtoupper
            // [['usuario_nome'], 'filter', 'filter'=>'strtolower'],
@@ -63,6 +64,7 @@ class Usuario extends \yii\db\ActiveRecord
             'usuario_email' => 'E-mail',
             'usuario_tel' => 'Tel.',
             'usuario_senha' => 'Senha',
+            'usuario_status' => 'Status',
         ];
     }
 

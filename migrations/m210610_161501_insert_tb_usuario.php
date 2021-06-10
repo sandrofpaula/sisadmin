@@ -19,7 +19,8 @@ class m210610_161501_insert_tb_usuario extends Migration
             'usuario_login',
             'usuario_email',
             'usuario_tel',
-            'usuario_senha'
+            'usuario_senha',
+            'usuario_status'
         ],[
             [
                 '1',
@@ -28,7 +29,8 @@ class m210610_161501_insert_tb_usuario extends Migration
                 'admin', 
                 'admin@wh.com', 
                 '92000', 
-                'e10adc3949ba59abbe56e057f20f883e' /*Senha: 123456 */
+                'e10adc3949ba59abbe56e057f20f883e', /*Senha: 123456 */
+                '1' 
             ],
 
 

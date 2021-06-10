@@ -8,6 +8,7 @@ use kartik\select2\Select2;
 use kartik\date\DatePicker;
 use kartik\datetime\DateTimePicker;
 use kartik\depdrop\DepDrop;//
+use kartik\widgets\SwitchInput;
 
 use app\modules\admin\models\Modulo;
 use app\modules\admin\models\Perfil;
@@ -85,6 +86,23 @@ use app\models\User;
                             echo $form->field($model, 'usuario_senha')->passwordInput(['maxlength' => true]);
                         }
                     ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                        <?= $form->field($model, 'usuario_status')->widget(SwitchInput::classname(), [
+                                'data' => [1 => "ATIVO", 0 => "INATIVO"],
+                                'pluginOptions'=>[
+                                    'handleWidth'=>60,
+                                    'onText'=>'ATIVO',
+                                    'offText'=>'INATIVO',
+                                    'onColor' => 'success',
+                                    'offColor' => 'danger',
+                                // 'allowClear' => true,
+                                    // 'minimumInputLength' => 1,
+                                ]
+                            ]);
+                        ?>
                 </div>
             </div>
 
