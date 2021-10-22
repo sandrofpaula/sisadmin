@@ -20,7 +20,7 @@ use yii\helpers\Url;
  * 'columns' => [
  *     // ...
  *     [
- *         'class' => ActionColumn::className(),
+ *         'class' => ActionColumn::class,
  *         // you may configure additional properties here
  *     ],
  * ]
@@ -157,7 +157,6 @@ class ActionColumn extends Column
     /**
      * Initializes the default button rendering callbacks.
      */
-    /*
     protected function initDefaultButtons()
     {
         $this->initDefaultButton('view', 'eye-open');
@@ -167,18 +166,7 @@ class ActionColumn extends Column
             'data-method' => 'post',
         ]);
     }
-    */
 
-    protected function initDefaultButtons()
-    {
-        $this->initDefaultButton('view', 'eye-open',['class'=>'btn btn-info btn-xs']);
-        $this->initDefaultButton('update', 'pencil',['class'=>'btn btn-primary btn-xs']);
-        $this->initDefaultButton('delete', 'trash', [
-            'class'=>'btn btn-danger btn-xs',
-            'data-confirm' => Yii::t('yii', 'Deseja realmente excluir este item?'),
-            'data-method' => 'post',
-        ]);
-    }
     /**
      * Initializes the default button rendering callback for single button.
      * @param string $name Button name as it's written in template

@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '25739eabd4271f79bf394fa5d622c5d4a9678c67',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -474,6 +474,15 @@
       array (
       ),
       'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'pretty_version' => 'v9.99.100',
+      'version' => '9.99.100.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
     ),
     'phar-io/manifest' => 
     array (
@@ -982,21 +991,21 @@
     ),
     'yiisoft/yii2' => 
     array (
-      'pretty_version' => '2.0.42.1',
-      'version' => '2.0.42.1',
+      'pretty_version' => '2.0.43',
+      'version' => '2.0.43.0',
       'aliases' => 
       array (
       ),
-      'reference' => '976e2e892af4df933831b5e0a05d0acf4b173d98',
+      'reference' => 'f370955faa3067d9b27879aaf14b0978a805cd59',
     ),
     'yiisoft/yii2-app-basic' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '25739eabd4271f79bf394fa5d622c5d4a9678c67',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (
