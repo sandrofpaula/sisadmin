@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
@@ -159,10 +160,19 @@ class ActionColumn extends Column
      */
     protected function initDefaultButtons()
     {
+        /*
         $this->initDefaultButton('view', 'eye-open');
         $this->initDefaultButton('update', 'pencil');
         $this->initDefaultButton('delete', 'trash', [
             'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
+            'data-method' => 'post',
+        ]);
+        */
+        $this->initDefaultButton('view', 'eye-open', ['class' => 'btn btn-info']);
+        $this->initDefaultButton('update', 'pencil', ['class' => 'btn btn-primary']);
+        $this->initDefaultButton('delete', 'trash', [
+            'class' => 'btn btn-danger',
+            'data-confirm' => Yii::t('yii', 'Deseja realmente excluir este item?'),
             'data-method' => 'post',
         ]);
     }
